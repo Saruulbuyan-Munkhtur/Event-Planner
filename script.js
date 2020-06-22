@@ -11,6 +11,8 @@ function addToList(){
         newItem.appendChild(newText)
         list.appendChild(newItem)
         input.value = ""
+        //var list = document.getElementById("to-do-list")
+        //var listItems = list.querySelectorAll("li")
     }
 };
 
@@ -21,10 +23,12 @@ function enterToList(e){
     }
 };
 
-function crossItem(item) {
-    alert("It works")
-    var itemText = item.innerHtml
-    item.innerHtml = "<del>" + itemText + "</del>" 
+function crossItem(e) {
+    e = e || window.event;
+    var item = e.target || e.srcElement;
+
+    var itemText = item.innerHTML;
+    item.innerHTML = "<del>" + itemText + "</del>"; 
 }
 
 
