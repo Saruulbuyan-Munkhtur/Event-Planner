@@ -13,6 +13,7 @@ function addToList(){
         list.appendChild(newItem)
         newItem.setAttribute("class", "active")
         input.value = ""
+        newItem.addEventListener("click", itemClick);
     }
 };
 
