@@ -24,13 +24,12 @@ function enterToList(e){
     }
 };
 
-function itemClick(e) {
+const itemClick = (e) => {
     e = e || window.event;
-    var item = e.target || e.srcElement;
-    if(item.hasAttribute("class")){
+    const item = e.target || e.srcElement;
+    if (item.hasAttribute("class")){
         item.removeAttribute("class") 
-    }
-    else{
+    } else {
         item.setAttribute("class", "crossed");
     }
 }
